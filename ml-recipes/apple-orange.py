@@ -7,7 +7,10 @@ features = [[110, 0], [130, 0], [150, 1], [170, 1]]
 # Labels as 1 for Orance and 0 Apple 
 labels = [1,1,0,0]
 
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(features, labels)
+# Traing `classifier` with training data
 
-print(clf.predict([[175, 1]]))
+classifier = tree.DecisionTreeClassifier()
+classifier = classifier.fit(features, labels)
+
+# showing predicted output [0] as Apple or [1] as Orange
+print(classifier.predict([[105, 1]]))
